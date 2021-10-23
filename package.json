@@ -1,0 +1,38 @@
+{
+  "name": "plnvwr",
+  "description": "View Flight Simulator flight plans in the browser (.fpl files)",
+  "author": {
+    "name": "Alberto Rico"
+  },
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@vue-leaflet/vue-leaflet": "^0.6.1",
+    "bbox-helper-functions": "^3.0.1",
+    "bootstrap": "^5.1.3",
+    "leaflet": "^1.7.1",
+    "pinia": "^2.0.0-rc.10",
+    "plnprsr": "^1.0.1",
+    "promise-file-reader": "^1.0.3",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@iconify/json": "^1.1.418",
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vue/compiler-sfc": "^3.2.20",
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-vue": "^7.20.0",
+    "pug": "^3.0.2",
+    "sass": "^1.43.3",
+    "unplugin-icons": "^0.12.16",
+    "vite": "^2.4.4",
+    "vite-plugin-pwa": "^0.11.3",
+    "workbox-window": "^6.3.0"
+  }
+}

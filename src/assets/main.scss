@@ -1,0 +1,14 @@
+$primary: #00336E;
+$border-radius: 8px;
+$body-bg: #F3F5F9;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+h5, h6 {
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
