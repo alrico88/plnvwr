@@ -5,6 +5,7 @@ export const useStore = defineStore('main', {
   state() {
     return {
       flightPlan: null,
+      selectedStyle: 'stadiaOutdoors',
     };
   },
   getters: {

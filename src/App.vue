@@ -10,6 +10,9 @@
       .row
         .col
           flight-plan
+      .row
+        .col
+          map-options
   flight-plan-map.flex-grow-1.h-100
 </template>
 
@@ -18,6 +21,7 @@ import FileInput from './components/FileInput.vue';
 import FlightPlan from './components/FlightPlan.vue';
 import FlightPlanMap from './components/FlightPlanMap.vue';
 import MapIcon from '~icons/mdi/map-search-outline';
+import MapOptions from './components/MapOptions.vue';
 </script>
 
 <style scoped lang="scss">

@@ -1,6 +1,13 @@
 <template lang="pug">
-l-map(ref="mapRef", :zoom="3")
-  l-tile-layer(:url="url", :attribution="attribution")
+l-map(
+  ref="mapRef",
+  :zoom="3",
+  :options="{attributionControl: false}",
+  :fade-animation="true"
+  :world-copy-jump="true",
+)
+  l-tile-layer(:url="tileLayer.url")
+  l-control-attribution(:prefix="tileLayer.attr", position="bottomright")
   l-circle-marker(
     v-for="marker of latLngs",
     :lat-lng="marker.latLng",
@@ -16,10 +23,11 @@ l-map(ref="mapRef", :zoom="3")
 import 'leaflet/dist/leaflet.css';
 import { getDatasetBBox } from 'bbox-helper-functions';
 import {
-  LMap, LPolyline, LCircleMarker, LTileLayer, LTooltip,
+  LMap, LPolyline, LCircleMarker, LTileLayer, LTooltip, LControlAttribution,
 } from '@vue-leaflet/vue-leaflet';
 import { ref, watch, computed } from 'vue';
 import { useStore } from '../store';
+import mapProviders from '../helpers/mapProviders';
 
 const store = useStore();
 
@@ -55,6 +63,6 @@ watch(latLngs, (val) => {
   mapRef.value.leafletObject.fitBounds(newBounds);
 });
 
-const url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-const attribution = '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors';
+const tileLayer = computed(() => mapProviders[store.selectedStyle]);
+
 </script>
