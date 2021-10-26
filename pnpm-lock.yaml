@@ -14,7 +14,7 @@ specifiers:
   eslint-plugin-vue: ^7.20.0
   leaflet: ^1.7.1
   pinia: ^2.0.0-rc.10
-  plnprsr: ^1.0.1
+  plnprsr: ^1.1.2
   promise-file-reader: ^1.0.3
   pug: ^3.0.2
   sass: ^1.43.3
@@ -31,7 +31,7 @@ dependencies:
   bootstrap: 5.1.3
   leaflet: 1.7.1
   pinia: 2.0.0-rc.10_vue@3.2.20
-  plnprsr: 1.0.1
+  plnprsr: 1.1.2
   promise-file-reader: 1.0.3
   vue: 3.2.20
 
@@ -3225,8 +3225,8 @@ packages:
       find-up: 2.1.0
     dev: true
 
-  /plnprsr/1.0.1:
-    resolution: {integrity: sha512-wy8Wj1Q6m01+APz6qzLNPQ7DiNIv85/zlEPMwGK2fZKiGz6Zddgb5JmQcucLIXHGRhyT2h/pvYpnVHkUKeXjhg==}
+  /plnprsr/1.1.2:
+    resolution: {integrity: sha512-QJ/60uF3wfeA/ZFIz/sD/GSP1ExaZoU5QE3O8VB8gUra0dH2wpC4+AyXmgKWNs1qvItb6UX0zyRIW2Ga0oamOw==}
     dependencies:
       '@sindresorhus/is': 4.2.0
       fast-xml-parser: 3.20.3

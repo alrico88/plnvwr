@@ -1,8 +1,9 @@
 <template lang="pug">
-.form-floating
-  select.form-select.bg-white#mapStyleSelect(v-model="selectedOption")
-    option(v-for="option of options", :value="option.key") {{ option.text }}
-  label(for="mapStyleSelect") Map style
+.form-group
+  .form-floating
+    select.form-select.bg-white#mapStyleSelect(v-model="selectedOption")
+      option(v-for="option of options", :value="option.key") {{ option.text }}
+    label(for="mapStyleSelect") Map style
 </template>
 
 <script setup>

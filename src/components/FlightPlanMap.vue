@@ -64,5 +64,4 @@ watch(latLngs, (val) => {
 });
 
 const tileLayer = computed(() => mapProviders[store.selectedStyle]);
-
 </script>

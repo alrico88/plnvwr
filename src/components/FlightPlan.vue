@@ -37,16 +37,18 @@
               th Ident.
               th(v-show="hasProcs") Proc. / Airway
               th Altitude (ft.)
+              th Bearing (º)
               th Distance (nm.)
           tbody
-            tr.align-middle(v-for="waypoint of fp.route")
+            tr.align-middle(v-for="waypoint, index of fp.route", :key="waypoint.id")
               td.fw-bold.font-monospace {{ waypoint.id }}
               td(v-show="hasProcs")
                 span.text-muted {{ waypoint.airway }}
                 span.text-primary {{ waypoint.sid }}
                 span.text-primary {{ waypoint.star }}
               td {{ waypoint.altitude }}
-              td {{ waypoint.distance }}
+              td {{ index === 0 ? '--' : waypoint.bearing }}
+              td {{ index === 0 ? '--' : waypoint.distance }}
 
 </template>
 
