@@ -26,9 +26,12 @@ import { getDatasetBBox } from 'bbox-helper-functions';
 import {
   LMap, LPolyline, LCircleMarker, LTileLayer, LTooltip, LControlAttribution,
 } from '@vue-leaflet/vue-leaflet';
-import { ref, watch, computed } from 'vue';
+import {
+  ref, watch, computed, onMounted, onUnmounted,
+} from 'vue';
 import { useStore } from '../store';
 import mapProviders from '../helpers/mapProviders';
+import { goToEmitter } from '../emitters/goTo';
 
 const store = useStore();
 
@@ -65,4 +68,17 @@ watch(latLngs, (val) => {
 });
 
 const tileLayer = computed(() => mapProviders[store.selectedStyle]);
+
+function moveToCoords(coords) {
+  const [lon, lat] = coords;
+  mapRef.value.leafletObject.setView([lat, lon], 14);
+}
+
+onMounted(() => {
+  goToEmitter.on('move-map', moveToCoords);
+});
+
+onUnmounted(() => {
+  goToEmitter.off('move-map', moveToCoords);
+});
 </script>
