@@ -1,5 +1,5 @@
 <template lang="pug">
-.alert.alert-primary.py-2.px-3
+.alert.alert-primary.py-2.px-3.mb-0
   p.mb-0 #[no-plan] No flight plan loaded
 </template>
 

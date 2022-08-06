@@ -1,6 +1,6 @@
 <template lang="pug">
 .form-group
-  .form-check.form-switch
+  .form-check
     input.form-check-input#showBaseLayer(checked, disabled, type="checkbox" role="switch")
     label.form-check-label(for="showBaseLayer") Show base layer
 </template>
