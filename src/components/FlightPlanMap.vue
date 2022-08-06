@@ -71,7 +71,6 @@ const tileLayer = computed(() => mapProviders[store.selectedStyle]);
 
 function moveToCoords(coords) {
   const [lon, lat] = coords;
-  // TODO: Mover mapa
   mapRef.value.leafletObject.setView([lat, lon], 14);
 }
 
