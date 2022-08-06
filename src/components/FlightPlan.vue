@@ -45,7 +45,7 @@
               th Distance (nm.)
           tbody
             tr.align-middle(v-for="waypoint, index of fp.route", :key="waypoint.id")
-              td.fw-bold.font-monospace {{ waypoint.id }}
+              td.fw-bold.font-monospace.hoverable(@click="goTo(waypoint)") {{ waypoint.id }}
               td(v-show="hasProcs")
                 span.text-muted {{ waypoint.airway }}
                 span.text-primary {{ waypoint.sid }}
@@ -64,6 +64,7 @@ import IconTakeoff from '~icons/mdi/airplane-takeoff';
 import IconLanding from '~icons/mdi/airplane-landing';
 import IconRoute from '~icons/tabler/route';
 import IconInfo from '~icons/uil/map-marker-info';
+import { goToEmitter } from '../emitters/goTo';
 
 const store = useStore();
 
@@ -79,4 +80,8 @@ const hasProcs = computed(() => {
 
   return fp.value.route.some(checker);
 });
+
+function goTo(wpt) {
+  goToEmitter.emit('move-map', wpt.coords);
+}
 </script>
