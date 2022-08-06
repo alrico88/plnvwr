@@ -5,6 +5,7 @@ l-map(
   :options="{attributionControl: false}",
   :fade-animation="true"
   :world-copy-jump="true",
+  :zoom-animation="true"
 )
   l-tile-layer(:url="tileLayer.url")
   l-control-attribution(:prefix="tileLayer.attr", position="bottomright")

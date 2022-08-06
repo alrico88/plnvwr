@@ -3,27 +3,27 @@
   .col
     h6 #[icon-info] Flight details
     template(v-if="store.fpLoaded")
-      .card.shadow-sm
+      .card.card-shadow
         .card-body.p-2
-          .row.row-cols-2.mb-2
+          .row.row-cols-2.mb-2.g-2
             .col
               h6 #[icon-takeoff] From
-              p.font-monospace.fw-bold.lead.mb-0 {{ fp.departure.id }}
-              p.mb-0.text-truncate(:title="fp.departure.name") {{ fp.departure.name }}
+              p.font-monospace.lead.mb-0 {{ fp.departure.id }}
+              p.mb-0.text-truncate.text-wrap(:title="fp.departure.name") {{ fp.departure.name }}
             .col
               h6 #[icon-landing] To
-              p.font-monospace.fw-bold.lead.mb-0 {{ fp.destination.id }}
-              p.mb-0.text-truncate(:title="fp.destination.name") {{ fp.destination.name }}
+              p.font-monospace.lead.mb-0 {{ fp.destination.id }}
+              p.mb-0.text-truncate.text-wrap(:title="fp.destination.name") {{ fp.destination.name }}
           .row.row-cols-3
             .col
               h6 Leg distance
-              .font-monospace.fw-bold {{ Math.round(fp.totalDistance) }} nm
+              .font-monospace {{ Math.round(fp.totalDistance) }} nm
             .col
               h6 Flight rules
-              .font-monospace.fw-bold {{ fp.planType }}
+              .font-monospace {{ fp.planType }}
             .col
               h6 Cruising alt.
-              .font-monospace.fw-bold {{ fp.cruisingAltitude }}
+              .font-monospace {{ fp.cruisingAltitude }}
     template(v-else)
       empty-fp
 .row(v-if="store.fpLoaded")
@@ -31,8 +31,8 @@
     .row
       .col
         h6 #[icon-route] Route
-        table.table.table-bordered.table-sm.bg-white.shadow-sm
-          thead.bg-light
+        table.table.table-bordered.table-sm.table-striped.bg-white.card-shadow
+          thead.bg-light.text-uppercase
             tr
               th Ident.
               th(v-show="hasProcs") Proc. / Airway

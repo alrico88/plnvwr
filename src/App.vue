@@ -1,10 +1,10 @@
 <template lang="pug">
 .d-flex.vh-100
   aside.h-100.aside-style.border-end
-    .container
+    .container.py-2
       .row
         .col
-          h1.text-primary.mb-0.py-2 #[map-icon] plnvwr
+          h1.text-primary.mb-0.main-title #[map-icon] plnvwr
     file-input.mb-2
     .container
       .row

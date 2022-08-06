@@ -2,8 +2,9 @@
 .row
   .col
     h6 #[gears-icon] Map options
-    style-select.mb-1
-    layer-select
+    .vstack.gap-2
+      style-select
+      layer-select
 </template>
 
 <script setup>
