@@ -9,11 +9,15 @@
             .col
               h6 #[icon-takeoff] From
               p.font-monospace.lead.mb-0 {{ fp.departure.id }}
-              p.mb-0.text-truncate.text-wrap(:title="fp.departure.name") {{ fp.departure.name }}
+              p.mb-0.text-truncate.text-wrap.text-muted(
+                :title="fp.departure.name"
+              ) {{ fp.departure.name }}
             .col
               h6 #[icon-landing] To
               p.font-monospace.lead.mb-0 {{ fp.destination.id }}
-              p.mb-0.text-truncate.text-wrap(:title="fp.destination.name") {{ fp.destination.name }}
+              p.mb-0.text-truncate.text-wrap.text-muted(
+                :title="fp.destination.name"
+              ) {{ fp.destination.name }}
           .row.row-cols-3
             .col
               h6 Leg distance
