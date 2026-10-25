@@ -16,7 +16,7 @@
     "maplibre-gl": "^6.15.0",
     "mitt": "^3.0.0",
     "pinia": "^2.0.17",
-    "plnprsr": "^1.1.2",
+    "plnprsr": "^2.0.0",
     "promise-file-reader": "^1.0.3",
     "vue": "^3.5.44"
   },
