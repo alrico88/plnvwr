@@ -3,9 +3,8 @@ $border-radius: 4px;
 $body-bg: #F3F5F9;
 $font-family-base: 'Inter',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 $font-family-monospace: 'Fira Mono',SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-$tooltip-bg: #2f2f2f;
 
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap';
 
 html {
   font-size: 14px;
@@ -18,16 +17,6 @@ h5, h6 {
 
 .form-group {
   margin-bottom: 1rem;
-}
-
-.leaflet-tooltip-top {
-  background-color: $tooltip-bg;
-  border: 1px solid #909090;
-  color: #fafafa;
-
-  &::before {
-    border-top-color: $tooltip-bg;
-  }
 }
 
 table {
